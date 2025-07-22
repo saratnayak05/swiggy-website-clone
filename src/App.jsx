@@ -1,20 +1,19 @@
-import Header from './components/Header'
-import FoodsList from './components/FoodsList'
-import TopRestaurants from './components/TopRestaurants'
-import Restaurants from './components/Restaurants'
-import './App.css'
+
+import HomePage from "./pages/HomePage";
+import RestaurantsPage from "./pages/RestaurantsPage";
+import { Routes, Route} from 'react-router-dom';
 
 const App = () => {
   return (
-   <>
-    <Header/>
-    <FoodsList/>
-    <TopRestaurants/>
-    <div style={{padding:"0 5vw"}}>
-       <Restaurants/>
-    </div>
-   </>
-  )
-}
+    <>
+    
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/restaurants" element={<RestaurantsPage/>} />
+      </Routes>
 
-export default App
+    </>
+  );
+};
+
+export default App;

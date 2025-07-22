@@ -1,0 +1,1 @@
+export const SWIGGY_API_URL="https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.2959847&lng=85.8246101&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";

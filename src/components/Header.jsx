@@ -4,7 +4,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='header-section'>NavBar</div>
+    <div className=' bg-amber-700 text-center'>NavBar</div>
   )
 }
 
