@@ -5,8 +5,7 @@ export const fetchRestaurants = async () => {
     const response = await fetch(SWIGGY_API_URL);
     const data = await response.json();
     return (
-      data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants || []
+      data?.data|| []
     );
   } catch (error) {
     console.error("error fetching restaurants", error);

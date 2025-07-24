@@ -2,7 +2,7 @@ import { CLOUDINARY_ID } from "../utils/constant";
 import star from "../assets/ratingStar.svg";
 
 const RestaurantCard = (props) => {
-  console.log(props);
+  
   const {
     name,
     cloudinaryImageId,
@@ -15,10 +15,10 @@ const RestaurantCard = (props) => {
   } = props.resdata.info;
 
   return (
-    <div className="res-card flex flex-col gap-2 transition-transform duration-300 ease-in-out hover:scale-95 cursor-pointer">
+    <div className="res-card flex flex-col gap-2 transition-transform duration-300 ease-in-out hover:scale-95 cursor-pointer h-auto w-auto">
 
 
-      <div className="res-card-top  relative h-45 card-top-part rounded-2xl overflow-hidden">
+      <div className="res-card-top  relative h-45 w-70 card-top-part rounded-2xl overflow-hidden">
         <img
           src={CLOUDINARY_ID + cloudinaryImageId}
           alt="img"
@@ -33,7 +33,7 @@ const RestaurantCard = (props) => {
         </div>
       </div>
 
-      <div className="res-card-bottom pl-3">
+      <div className="res-card-bottom pl-3    w-72">
         <div className="name-rating-part text-lg/tight">
           <div className="res-name font-bold  w-full whitespace-nowrap overflow-hidden text-ellipsis ">
             <span>{name}</span>

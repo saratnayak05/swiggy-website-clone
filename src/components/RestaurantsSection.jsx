@@ -5,29 +5,21 @@ import { useState, useEffect } from "react";
 
 
 
-const RestaurantsSection = () => {
-  const [restaurantData, setrestaurantData] = useState([]);
+const RestaurantsSection = ({data}) => {
+  // const [restaurantData, setrestaurantData] = useState([]);
 
-  useEffect(() => {
-    getRestaurants();
-  }, []);
-
-  const getRestaurants =async () =>{
-      const data = await fetchRestaurants(); 
-      setrestaurantData(data);
-  }
-
+ 
 
 
 
   
   return (
     <div className=" px-40">
-      <div>Restaurants with online food delivery in Bhubaneswar</div>
+      <div className=" text-xl font-bold pt-10">Restaurants with online food delivery in Bhubaneswar</div>
       <div className="filter-section">filter section </div>
       <div className="res-container  grid grid-cols-4 gap-6">
 
-        {restaurantData.map((restaurants) => (
+        {data.map((restaurants) => (
           <RestaurantCard key={restaurants.info.id} resdata={restaurants} />
         ))}
 
